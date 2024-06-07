@@ -93,7 +93,7 @@ namespace pc4_progra.Controllers
         }
         public float Sigmoid(float x)
         {
-            return (float) (100/(1 + Math.Exp(-x)));
+            return 1 / (1 + (float)Math.Exp(-x));
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
