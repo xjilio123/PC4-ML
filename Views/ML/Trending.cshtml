@@ -11,12 +11,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #b8d7f7;
+            background-color: #f8f9fa;
             margin: 20px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         h1, h2 {
-            color: #2f00ff;
+            color: #343a40;
         }
         .form-group {
             margin-bottom: 15px;
@@ -27,15 +26,15 @@
             margin-bottom: 10px;
         }
         .btn-primary {
-            background-color: #ff0000;
-            border-color: #000000;
+            background-color: #007bff;
+            border-color: #007bff;
             padding: 10px 20px;
             color: white;
             text-decoration: none;
         }
         .btn-primary:hover {
-            background-color: #00ff62;
-            border-color: #000000;
+            background-color: #0056b3;
+            border-color: #0056b3;
         }
         table {
             width: 100%;
@@ -44,14 +43,14 @@
         }
         th, td {
             padding: 10px;
-            border: 1px solid #000000;
+            border: 1px solid #dee2e6;
             text-align: left;
         }
         th {
-            background-color: #edff9c;
+            background-color: #e9ecef;
         }
         tr:nth-child(even) {
-            background-color: #f9fdbb;
+            background-color: #f2f2f2;
         }
     </style>
 </head>
@@ -66,7 +65,8 @@
         <button type="submit" class="btn btn-primary">VER PELICULAS</button>
     </form>
 
-    @if (ratings != null && trendingProductos != null) {
+    @if (ratings != null && trendingProductos != null)
+    {
         <h2>RATING</h2>
         <table class="table">
             <thead>
@@ -102,4 +102,5 @@
     }
 </body>
 </html>
+
 
