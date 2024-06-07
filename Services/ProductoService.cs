@@ -11,9 +11,12 @@ namespace pc4_progra.Services
         public List<Producto> getTrendingProductos() {
             List<Producto> result = new List<Producto>
             {
-                new Producto { ProductoId = 3, ProductoNombre = "The Dark Knight (2008)"  },
-                new Producto { ProductoId = 5, ProductoNombre = "The Lord of the Rings: The Return of the King (2003)" },
-                new Producto { ProductoId = 9, ProductoNombre = "The Matrix (1999)" }
+                new Producto { ProductoId = 1, ProductoNombre = "Jurassic Park (1993)" },
+                new Producto { ProductoId = 2, ProductoNombre = "The Lost World: Jurassic Park (1997)" },
+                new Producto { ProductoId = 3, ProductoNombre = "Jurassic Park III (2001)" },
+                new Producto { ProductoId = 4, ProductoNombre = "Jurassic World (2015)" },
+                new Producto { ProductoId = 5, ProductoNombre = "Jurassic World: Fallen Kingdom (2018)" },
+                new Producto { ProductoId = 6, ProductoNombre = "Jurassic World Dominion (2022)" }
             };
 
             return result;
@@ -21,16 +24,19 @@ namespace pc4_progra.Services
         public List<Producto> getAllProductos() {
             List<Producto> result = new List<Producto>
             {
-                new Producto { ProductoId = 1, ProductoNombre = "The Shawshank Redemption (1994)" },
-                new Producto { ProductoId = 2, ProductoNombre = "The Godfather (1972)" },
-                new Producto { ProductoId = 3, ProductoNombre = "The Dark Knight (2008)" },
-                new Producto { ProductoId = 4, ProductoNombre = "Pulp Fiction (1994)" },
-                new Producto { ProductoId = 5, ProductoNombre = "The Lord of the Rings: The Return of the King (2003)" },
-                new Producto { ProductoId = 6, ProductoNombre = "Forrest Gump (1994)" },
-                new Producto { ProductoId = 7, ProductoNombre = "Inception (2010)" },
-                new Producto { ProductoId = 8, ProductoNombre = "Fight Club (1999)" },
-                new Producto { ProductoId = 9, ProductoNombre = "The Matrix (1999)" },
-                new Producto { ProductoId = 10, ProductoNombre = "Interstellar (2014)" }
+                new Producto { ProductoId = 1, ProductoNombre = "Jurassic Park (1993)" },
+                new Producto { ProductoId = 2, ProductoNombre = "The Lost World: Jurassic Park (1997)" },
+                new Producto { ProductoId = 3, ProductoNombre = "Jurassic Park III (2001)" },
+                new Producto { ProductoId = 4, ProductoNombre = "Jurassic World (2015)" },
+                new Producto { ProductoId = 5, ProductoNombre = "Jurassic World: Fallen Kingdom (2018)" },
+                new Producto { ProductoId = 6, ProductoNombre = "Jurassic World Dominion (2022)" },
+                new Producto { ProductoId = 7, ProductoNombre = "Star Wars: Episode IV - A New Hope (1977)" },
+                new Producto { ProductoId = 8, ProductoNombre = "Star Wars: Episode V - The Empire Strikes Back (1980)" },
+                new Producto { ProductoId = 9, ProductoNombre = "Star Wars: Episode VI - Return of the Jedi (1983)" },
+                new Producto { ProductoId = 10, ProductoNombre = "The Terminator (1984)" },
+                new Producto { ProductoId = 11, ProductoNombre = "Terminator 2: Judgment Day (1991)" },
+                new Producto { ProductoId = 12, ProductoNombre = "Alien (1979)" },
+                new Producto { ProductoId = 13, ProductoNombre = "Aliens (1986)" }
             };
 
             return result;
