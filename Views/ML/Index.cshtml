@@ -4,38 +4,94 @@
     var productos = ViewData["productos"] as List<pc4_progra.Models.Producto>;
 }
 
-<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c3daf0;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #8400ff;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-primary {
+            background-color: #00ff4c;
+            border-color: #000000;
+            padding: 10px 20px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        table {
 
-<form asp-controller="ML" asp-action="Predict" method="post">
-    <div class="form-group">
-        <label for="id">Introduce una puntuacion (0=No tienen Rating , 1=Tienen Rating)</label>
-        <input type="text" class="form-control" id="id" name="id" />
-    </div>
-    <button type="submit" class="btn btn-primary">VER RECOMENDACIONES</button>
-</form>
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000000;
+            text-align: left;
+        }
+        th {
+            background-color: #75f55c;
+        }
+        tr:nth-child(even) {
+            background-color: #69f7cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
 
-@if (ratings != null && productos != null)
-{
-    <h2>RECOMENDACIONES DE PELICULAS DE CIENCIA FICCIÓN</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>PELICULAS</th>
-                <th>RATING</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var rating in ratings)
-            {
-                var producto = productos.FirstOrDefault(p => p.ProductoId == rating.productoId);
-                if (producto != null)
+    <form asp-controller="ML" asp-action="Predict" method="post">
+        <div class="form-group">
+            <label for="id">Introduce una puntuacion (0=No tienen Rating , 1=Tienen Rating)</label>
+            <input type="text" class="form-control" id="id" name="id" />
+        </div>
+        <button type="submit" class="btn btn-primary">VER RECOMENDACIONES</button>
+    </form>
+
+    @if (ratings != null && productos != null)
+    {
+        <h2>RECOMENDACIONES DE PELICULAS DE CIENCIA FICCIÓN</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>PELICULAS</th>
+                    <th>RATING</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rating in ratings)
                 {
-                    <tr>
-                        <td>@producto.ProductoNombre</td>
-                        <td>@rating.normalizedScore</td>
-                    </tr>
+                    var producto = productos.FirstOrDefault(p => p.ProductoId == rating.productoId);
+                    if (producto != null)
+                    {
+                        <tr>
+                            <td>@producto.ProductoNombre</td>
+                            <td>@rating.normalizedScore</td>
+                        </tr>
+                    }
                 }
-            }
-        </tbody>
-    </table>
-}
+            </tbody>
+        </table>
+    }
+</body>
+</html>
