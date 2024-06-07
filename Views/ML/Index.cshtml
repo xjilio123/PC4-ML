@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Análisis de Recomendaciones";
+    ViewData["Title"] = "MACHINE LEARNING ";
     var ratings = ViewData["ratings"] as List<(int productoId, float normalizedScore)>;
     var productos = ViewData["productos"] as List<pc4_progra.Models.Producto>;
 }
@@ -8,20 +8,20 @@
 
 <form asp-controller="ML" asp-action="Predict" method="post">
     <div class="form-group">
-        <label for="id">Escribe el Id del usuario</label>
+        <label for="id">Introduce una puntuacion (0=No tienen Rating , 1=Tienen Rating)</label>
         <input type="text" class="form-control" id="id" name="id" />
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary">VER RECOMENDACIONES</button>
 </form>
 
 @if (ratings != null && productos != null)
 {
-    <h2>Recomendaciones</h2>
+    <h2>RECOMENDACIONES DE PELICULAS DE CIENCIA FICCIÓN</h2>
     <table class="table">
         <thead>
             <tr>
-                <th>Producto</th>
-                <th>Puntuación</th>
+                <th>PELICULAS</th>
+                <th>RATING</th>
             </tr>
         </thead>
         <tbody>

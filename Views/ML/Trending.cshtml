@@ -8,20 +8,20 @@
 
 <form asp-controller="ML" asp-action="PredictTrending" method="post">
     <div class="form-group">
-        <label for="id">Escribe el Id del usuario</label>
+        <label for="id">Escribe 1 para conocer las mejores PELICULAS con mayor puntaje de Rating</label>
         <input type="text" class="form-control" id="id" name="id" />
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary">VER PELICULAS</button>
 </form>
 
 @if (ratings != null && trendingProductos != null)
 {
-    <h2>Recomendaciones</h2>
+    <h2>RATING</h2>
     <table class="table">
         <thead>
             <tr>
-                <th>Producto</th>
-                <th>Puntuación</th>
+                <th>PELICULAS</th>
+                <th>RATING</th>
             </tr>
         </thead>
         <tbody>
