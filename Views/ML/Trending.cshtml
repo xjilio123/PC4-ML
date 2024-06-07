@@ -67,13 +67,14 @@
     </form>
 
     @if (ratings != null && trendingProductos != null)
-        {
+    {
         <h2>RATING</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th>PELICULAS</th>
                     <th>RATING</th>
+                    <th>COMENTARIOS</th>
                 </tr>
             </thead>
             <tbody>
@@ -85,11 +86,19 @@
                         <tr>
                             <td>@producto.ProductoNombre</td>
                             <td>@rating.normalizedScore</td>
+                            <td>
+                                @if (rating.normalizedScore > 0.9) {
+                                    <span>PELICULA FANTASTICA</span>
+                                } else if (rating.normalizedScore >= 0.86) {
+                                    <span>BUENA PELICULA, PERO PUDO SER MEJOR</span>
+                                } else {
+                                    <span>NO FUE UNA BUENA PELICULA COMO LO ESPERADO</span>
+                                }
+                            </td>
                         </tr>
                     }
                 }
-            }
-        </tbody>
+            </tbody>
         </table>
     }
 </body>
